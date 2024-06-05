@@ -1,0 +1,39 @@
+@import url('./variables.css');
+
+.app-table {
+    font-family: monospace;
+    color: rgb(var(--primary));
+    border: none;
+    padding: 0px;
+    font-size: medium;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: .8em;
+    }
+
+    thead {
+        td {
+            font-weight: 600;
+        }
+
+        border-bottom: solid 2px rgba(var(--secondary), 0.2);
+    }
+
+    tbody {
+        td {
+            color: rgb(var(--primary));
+        }
+
+        tr:nth-child(odd) {
+            td {
+                color: rgb(var(--primary));
+            }
+            background-color: rgba(var(--primary), 0.1);
+        }
+    }
+}

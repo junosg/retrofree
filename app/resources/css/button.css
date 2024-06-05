@@ -1,0 +1,75 @@
+@import url('./variables.css');
+
+.app-button {
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    min-width: 6em;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(95%);
+    }
+
+    &:active {
+        filter: brightness(90%);
+    }
+
+    &:disabled {
+        opacity: 0.4;
+    }
+
+    &[data-color="default"] {
+        --bg-color: rgb(var(--default));
+        --text-color: white;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    &[data-color="success"] {
+        --bg-color: rgb(var(--success));
+        --text-color: white;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    &[data-color="danger"] {
+        --bg-color: rgb(var(--danger));
+        --text-color: white;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    &[data-color="warning"] {
+        --bg-color: rgb(var(--warning));
+        --text-color: white;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    &[data-size="xs"] {
+        font-size: x-small;
+    }
+
+    &[data-size="sm"] {
+        font-size: small;
+    }
+
+    &[data-size="md"] {
+        font-size: medium;
+    }
+
+    &[data-size="lg"] {
+        font-size: large;
+    }
+
+    &[data-size="xl"] {
+        font-size: x-large;
+    }
+}

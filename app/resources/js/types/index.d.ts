@@ -10,3 +10,6 @@ export type PageProps<T extends Record<string, unknown> = Record<string, unknown
         user: User;
     };
 };
+
+export type Color = 'default'|'success'|'danger'|'warning';
+export type Size = 'xs'|'sm'|'md'|'lg'|'xl';

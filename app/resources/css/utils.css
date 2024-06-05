@@ -1,0 +1,38 @@
+@import url('./variables.css');
+
+.text-primary
+{
+    color: rgb(var(--primary));
+}
+
+.text-secondary
+{
+    color: rgb(var(--seconday));
+}
+
+.text-tertiary
+{
+    color: rgb(var(--tertiary));
+}
+
+.text-default
+{
+    color: rgb(var(--default));
+}
+
+.text-success
+{
+    color: rgb(var(--success));
+}
+
+.text-danger
+{
+    color: rgb(var(--danger));
+}
+
+.text-warning
+{
+    color: rgb(var(--warning));
+}
+
+

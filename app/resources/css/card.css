@@ -1,0 +1,17 @@
+@import url('./variables.css');
+
+.app-card {
+    background-color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 2em;
+    box-shadow: 1px 1px 1px 1px rgba(var(--primary), 0.2);
+
+    .app-card-label {
+        font-size: xx-large;
+        color: rgb(var(--default));
+        font-weight: 800;
+        font-family: monospace;
+        text-shadow: 1px 1px rgba(var(--tertiary), 0.1);
+    }
+}
