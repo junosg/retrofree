@@ -1,20 +1,25 @@
 <script setup lang="ts">
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import AppCard from '@/Components/App/AppCard.vue';
 import { Link } from '@inertiajs/vue3';
+
+type GuestLayoutProps = {
+    label?: string
+}
+
+const props = defineProps<GuestLayoutProps>();
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
         <div>
             <Link href="/">
-                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+                <ApplicationLogo class="w-20 h-20 text-gray-500 fill-current" />
             </Link>
         </div>
 
-        <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
-        >
+        <AppCard :label="props.label" class="w-1/4">
             <slot />
-        </div>
+        </AppCard>
     </div>
 </template>

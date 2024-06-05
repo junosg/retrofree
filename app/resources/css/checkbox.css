@@ -1,0 +1,16 @@
+@import url('./variables.css');
+
+.app-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+
+    .app-checkbox-field {
+        border-color: rgb(var(--secondary));
+        accent-color: rgb(var(--primary));
+        color: rgb(var(--primary));
+        border-radius: 0.2rem;
+    }
+}

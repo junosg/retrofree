@@ -1,0 +1,77 @@
+@import url('./variables.css');
+
+
+.app-input-field {
+    border-radius: 0.5em;
+    border: 0.1rem solid rgba(var(--primary), 0.5);
+    font-family: monospace;
+    background-color: white;
+    z-index: 1;
+
+    .app-input-label {
+        color: rgb(var(--primary));
+        font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+        color: rgb(var(--primary));
+        font-size: 14px;
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 0.5em;
+
+        &::placeholder {
+            color: rgba(var(--secondary), 0.8);
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+
+        &::-moz-focus-inner {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+
+        &::-moz-focus-outer {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &[data-size="xs"] {
+        font-size: x-small;
+    }
+
+    &[data-size="sm"] {
+        font-size: small;
+    }
+
+    &[data-size="md"] {
+        font-size: medium;
+    }
+
+    &[data-size="lg"] {
+        font-size: large;
+    }
+
+    &[data-size="xl"] {
+        font-size: x-large;
+    }
+}
+
+.app-input-error {
+    color: rgb(var(--danger));
+    font-size: smaller;
+    background: none;
+}
+
+
+
