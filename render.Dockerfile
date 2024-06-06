@@ -1,6 +1,12 @@
+#build frontend
+FROM node:lts-alpine as frontend
+COPY /app .
+RUN npm install
+RUN npm run build
+
 FROM richarvey/nginx-php-fpm:1.7.2
 
-COPY /app .
+COPY --from=frontend . .
 COPY /scripts /scripts
 COPY /conf /conf
 
@@ -18,10 +24,6 @@ ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
-
-RUN apt-get update && apt-get install -y nodejs npm
-RUN npm install
-RUN npm run build
 
 CMD ["/start.sh"]
 
