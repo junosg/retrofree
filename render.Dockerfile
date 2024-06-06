@@ -23,7 +23,7 @@ CMD ["/start.sh"]
 
 FROM node:lts-alpine as frontend
 
-WORKDIR /var/www/html
+WORKDIR /
 
 RUN npm install
 RUN npm run build
