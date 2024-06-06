@@ -20,10 +20,3 @@ ENV LOG_CHANNEL stderr
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 CMD ["/start.sh"]
-
-FROM node:lts-alpine as frontend
-
-WORKDIR /
-
-RUN npm install
-RUN npm run build
