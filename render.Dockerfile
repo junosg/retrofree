@@ -23,11 +23,7 @@ CMD ["/start.sh"]
 
 FROM node:lts-alpine as frontend
 
-COPY --from=service . /usr/app
-WORKDIR /usr/app
+WORKDIR /var/www/html
 
 RUN npm install
 RUN npm run build
-
-COPY . /usr/app
-
