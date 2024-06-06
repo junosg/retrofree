@@ -19,6 +19,7 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install
 RUN npm run build
 
