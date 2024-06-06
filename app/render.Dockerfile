@@ -1,8 +1,6 @@
 FROM richarvey/nginx-php-fpm:1.7.2 as service
 
-COPY /app .
-COPY /scripts /scripts
-COPY /conf /conf
+COPY . .
 
 # Image config
 ENV SKIP_COMPOSER 1
