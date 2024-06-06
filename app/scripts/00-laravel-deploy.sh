@@ -14,3 +14,9 @@ echo "Running migrations..."
 php artisan migrate --force
 
 chmod -R 777 ./
+
+apk update
+apk add nodejs
+apk add npm
+npm install
+npm run build
