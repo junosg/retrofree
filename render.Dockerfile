@@ -1,5 +1,4 @@
 FROM richarvey/nginx-php-fpm:1.7.2
-FROM node:lts-alpine
 
 COPY /app .
 COPY /scripts /scripts
@@ -21,3 +20,9 @@ ENV LOG_CHANNEL stderr
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 CMD ["/start.sh"]
+
+FROM node:lts-alpine
+
+RUN npm install
+RUN npm run build
+
