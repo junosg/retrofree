@@ -1,14 +1,6 @@
-#build frontend
-FROM node:lts-alpine as frontend
+FROM richarvey/nginx-php-fpm:1.7.2 as service
 
-WORKDIR /usr/app
-COPY /app /usr/app
-RUN npm install
-RUN npm run build
-
-FROM richarvey/nginx-php-fpm:1.7.2
-
-COPY --from=frontend /usr/app .
+COPY /app .
 COPY /scripts /scripts
 COPY /conf /conf
 
@@ -28,4 +20,9 @@ ENV LOG_CHANNEL stderr
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 CMD ["/start.sh"]
+
+FROM node:lts-alpine as frontend
+
+RUN npm install
+RUN npm run build
 
