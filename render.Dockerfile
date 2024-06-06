@@ -1,12 +1,14 @@
 #build frontend
 FROM node:lts-alpine as frontend
-COPY /app .
+
+WORKDIR /usr/app
+COPY /app /usr/app
 RUN npm install
 RUN npm run build
 
 FROM richarvey/nginx-php-fpm:1.7.2
 
-COPY --from=frontend . .
+COPY --from=frontend /usr/app .
 COPY /scripts /scripts
 COPY /conf /conf
 
