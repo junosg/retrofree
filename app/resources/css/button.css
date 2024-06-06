@@ -5,6 +5,7 @@
     border-radius: 0.5em;
     padding: 0.4rem;
     text-transform: uppercase;
+    text-shadow: 1px rgba(var(--primary), 0.2);
     font-weight: 500;
     min-width: 6em;
 
