@@ -20,3 +20,4 @@ echo "Running migrations..."
 php artisan migrate --force
 
 chmod -R 777 ./
+chmod -R 777 ./resources/
