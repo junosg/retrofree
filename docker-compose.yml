@@ -1,7 +1,6 @@
 x-environment: &environment
   environment:
     - APP_NAME="${APP_NAME}"
-    - APP_KEY=
     - APP_ENV=local
     - APP_DEBUG=true
     - APP_KEY=base64:0xaXA7lZpisouboAauMGZB2pl/Xduj6KUXrhkp2a4RQ=
@@ -40,7 +39,7 @@ services:
     <<: [*common]
     image: nginx:stable-alpine
     ports:
-      - "3000:3000"
+      - "3001:3001"
     depends_on:
       - php
     volumes:
