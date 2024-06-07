@@ -2,8 +2,6 @@
 apk update
 apk add nodejs
 apk add npm
-npm install
-npm run build
 
 echo "the PWD is : ${PWD}"
 echo "Running composer"
@@ -18,6 +16,9 @@ php artisan route:cache
 
 echo "Running migrations..."
 php artisan migrate --force
+
+npm install
+npm run build
 
 chmod -R 777 ./
 chmod -R 777 ./resources/
