@@ -2,9 +2,7 @@ FROM richarvey/nginx-php-fpm:3.1.6 as service
 
 COPY . .
 
-ARG ENVIRONMENT="prod"
-
-COPY ./conf/nginx/nginx-site.${ENVIRONMENT}.conf /var/www/html/conf/nginx/nginx-site.conf
+ARG ENVIRONMENT="production"
 
 # Image config
 ENV SKIP_COMPOSER 1
