@@ -1,4 +1,4 @@
-# Laravel Vue Nginx Render Template
+# RetroFree: A free retrospective tool
 
 ## Local Development
 
@@ -10,9 +10,9 @@
 2. Build the docker image
 
     ````sh
-    docker build --tag 'template' . --no-cache --force-rm
+    docker build --tag 'retrofree' . --no-cache --force-rm
 
 3. Run the docker image
 
     ````sh
-    docker run -p 3000:80 'template'
+    docker run -p 3000:80 'retrofree'

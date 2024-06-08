@@ -1,4 +1,4 @@
 cd app
 
-docker build --tag 'template' . --no-cache --force-rm
-docker run -p 3000:80 'template'
+docker build --tag 'retrofree' . --no-cache --force-rm --build-arg ENVIRONMENT="local"
+docker run -p 3000:80 'retrofree'

@@ -17,6 +17,8 @@ ENV REAL_IP_HEADER 1
 ENV APP_ENV ${ENVIRONMENT}
 ENV APP_KEY=base64:39HmKD2v0Uc5Rd34SxNEVYUOIDhUfzifHseRnSBuzt4=
 ENV APP_DEBUG false
+ENV APP_NAME=retrofree
+ENV VITE_APP_NAME=retrofree
 ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
