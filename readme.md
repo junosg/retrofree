@@ -1,8 +1,18 @@
-# A Laravel-Vue-Nginx-Render Template
+# Laravel Vue Nginx Render Template
 
 ## Local Development
 
-1. Open a terminal and execute this command
+1. Open a terminal and change current directory to app
 
     ````cmd
-        ./local.sh
+    cd app
+
+2. Build the docker image
+
+    ````sh
+    docker build --tag 'template' . --no-cache --force-rm
+
+3. Run the docker image
+
+    ````sh
+    docker run -p 3000:80 'template'
